@@ -144,16 +144,15 @@ export const constantRoutes = [{
 {
   path: '/information',
   component: Layout,
-  // redirect: '/',
-  name: 'Order',
+  name: 'Information',
   meta: {
     title: '客户信息',
     icon: 'example'
   },
   children: [{
-    path: 'orderList',
+    path: 'customerList',
     component: () => import('@/views/information/customer-list'),
-    name: 'Orderlist',
+    name: 'CustomerList',
     meta: {
       title: '客户列表',
       icon: 'list'

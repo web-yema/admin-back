@@ -1,8 +1,11 @@
 import request from '@/utils/request'
+import {
+  url
+} from './api'
 
 export function login(data) {
   return request({
-    url: '/user/login',
+    url: url + '/login',
     method: 'post',
     data
   })
@@ -10,15 +13,27 @@ export function login(data) {
 
 export function getInfo(token) {
   return request({
-    url: '/user/info',
+    url: url + '/info',
     method: 'get',
-    params: { token }
+    params: {
+      token
+    }
   })
 }
 
 export function logout() {
   return request({
-    url: '/user/logout',
+    url: url + '/logout',
     method: 'post'
+  })
+}
+
+// 注册
+
+export function registers(data) {
+  return request({
+    url: url + '/register',
+    method: 'post',
+    data
   })
 }
