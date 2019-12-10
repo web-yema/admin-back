@@ -45,6 +45,7 @@
 import { validEmail } from '@/utils/validate'
 import { registers } from '@/api/user'
 export default {
+  // eslint-disable-next-line vue/require-prop-types
   props: ['showsbtn'],
   data() {
     var validatoradminName = (rule, value, callback) => {
@@ -119,6 +120,7 @@ export default {
               message: data.message,
               type: data.data
             })
+            this.showsbtn()
           })
         } else {
           this.$message({

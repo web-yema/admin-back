@@ -86,7 +86,7 @@ export const constantRoutes = [{
   path: '/commodities',
   component: Layout,
   // redirect: '/',
-  name: 'Order',
+  // name: 'Order',
   meta: {
     title: '商品管理',
     icon: 'example'
@@ -106,6 +106,35 @@ export const constantRoutes = [{
     name: 'Commoditieslist',
     meta: {
       title: '商品列表',
+      icon: 'list'
+    }
+  }
+  ]
+},
+{
+  path: '/homebanner',
+  component: Layout,
+  // redirect: '/',
+  name: 'Homebanner',
+  meta: {
+    title: '首页轮播管理',
+    icon: 'example'
+  },
+  children: [{
+    path: 'addbannar',
+    component: () => import('@/views/homebanner/addbannar'),
+    name: 'Addbannar',
+    meta: {
+      title: '添加轮播',
+      icon: 'list'
+    }
+  },
+  {
+    path: 'allbannar',
+    component: () => import('@/views/homebanner/allbannar'),
+    name: 'Allbannar',
+    meta: {
+      title: '轮播列表',
       icon: 'list'
     }
   }
