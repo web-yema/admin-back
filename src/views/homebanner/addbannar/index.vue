@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import { RemoveBanner } from '@/api/home'
 export default {
   data() {
     return {
@@ -37,11 +38,15 @@ export default {
     }
   },
   methods: {
+    async removeBanner(data) {
+      await RemoveBanner(data)
+    },
     submitUpload() {
       this.$refs.upload.submit()
     },
     handleRemove(file, fileList) {
       // console.log(file, fileList)
+      this.removeBanner(file)
     },
     handlePreview(file) {
       // console.log(file)
